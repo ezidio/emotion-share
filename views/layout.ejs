@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>EmotionShare</title>
+	<link rel="stylesheet" type="text/css" href="/content/semantic/css/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="/content/app.css">
+</head>
+<body>
+
+
+<div class="ui menu teal inverted ">
+  <a class="item" href="/">
+    <i class="home icon"></i> Home
+  </a>
+  <a class="item" href="/events">
+    <i class="tag icon"></i> Eventos
+  </a>
+  <div class="right menu">
+    <a class="item" href="#">
+      <i class="user icon"></i> <%= user.name %>
+    </a>
+  </div>
+</div>
+
+    <div class="container">
+ <%- body %>
+    </div><!-- /.container -->
+
+<script type="text/javascript" src="/scripts/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/vendor/angular.min.js"></script>
+<%- scripts %>
+</body>
+</html>

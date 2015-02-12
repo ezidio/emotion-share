@@ -1,0 +1,47 @@
+<% layout('../layout') -%>
+<% script('/scripts/app/event/index.js') -%>
+
+<h1>Criar Eventos</h1>
+<div ng-controller="EventController as ctrl">
+	
+	<form name="eventForm" ng-submit="ctrl.save()">
+		<div class="ui form segment">
+	      <div class="field">
+	        <label>Titulo</label>
+	        <div class="ui left labeled icon input">
+	          <input type="text" ng-model="event.title" placeholder="informe o titulo do evento" />
+	          <i class="user icon"></i>
+	          <div class="ui corner label">
+	            <i class="icon asterisk"></i>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="field">
+	        <label>Tag</label>
+	        <div class="ui left labeled icon input">
+	          <input type="text" ng-model="event.tag" placeholder="Informe a tag" />
+	          <i class="tag icon"></i>
+	          <div class="ui corner label">
+	            <i class="icon asterisk"></i>
+	          </div>
+	        </div>
+	      </div>
+	      <button class="ui blue submit button">Criar</button>
+	    </div>
+    </form>
+
+	<div class="ui four column grid">
+	  	<div class="column" ng-repeat="event in events">
+			<div class="ui stacked segment" >
+			  <h2>{{event.title}}</h2>
+
+			  <a href="/events/{{event._id}}" class="ui animated button">
+				  <div class="visible content">Acessar</div>
+				  <div class="hidden content">
+				    <i class="right arrow icon"></i>
+				  </div>
+			  </a></li>
+			</div>
+		</div>
+	</div>
+</div>

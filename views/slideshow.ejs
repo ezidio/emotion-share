@@ -1,0 +1,31 @@
+<html ng-app="app.index">
+<head>
+	<meta charset="UTF-8">
+	<title>Instagram</title>
+	<link rel="stylesheet" type="text/css" href="/content/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/content/app.css">
+</head>
+<body ng-controller="IndexController as ctrl">
+
+	<div class="row" ng-if="updatedImage">
+	  <div class="col-xs-12">
+	    <div class="thumbnail last" >
+	      	<img ng-src="{{updatedImage.img}}" >
+	    	<h2>{{updatedImage.caption}}</h2>
+	    	<div class="user">
+	    		<img ng-src="{{updatedImage.user.img}}" >
+	    		<p>{{updatedImage.user.name}}</p>
+	    	</div>
+	    </div>
+	  </div>
+	</div>
+
+<script type="text/javascript">
+	window.accessToken = '<%= accessToken %>';
+</script>
+<script type="text/javascript" src="/scripts/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/vendor/angular.min.js"></script>
+<script type="text/javascript" src="/scripts/app/services/instagram.js"></script>
+<script type="text/javascript" src="/scripts/app/controllers/index.js"></script>
+</body>
+</html>

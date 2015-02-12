@@ -1,0 +1,22 @@
+{
+  "name": "Marmiteiros",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.6",
+    "mongoose": "*",
+    "ejs": "~0.7.1",
+    "ejs-locals": "^1.0.2",
+    "passport" : "*",
+    "passport-instagram" : "*",
+    "passport-facebook" : "*",
+    "q" : "*",
+    "restler" : "*",
+    "mongoose-q" : "*"
+
+  }
+}

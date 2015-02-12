@@ -1,0 +1,44 @@
+body {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.thumbnail.last {
+	position: relative;
+	background-color: #444;
+}
+
+.thumbnail.last > img {
+	box-shadow: 0 0 45px #222;
+}
+
+.thumbnail.last h2 {
+	position: absolute;
+	bottom : 0;
+	right: 0;
+	margin: 30px;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.thumbnail.last .user {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 10px;
+	padding: 5px;
+	background-color: #FFF;
+	border: 1px solid #999;
+	font-weight: bold;
+}
+
+.item .image .ribbon {
+	left: -1.2em;
+	position: absolute;
+	top: 1em;
+}
+
+.item .content .name,
+.item .content .description {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

@@ -1,0 +1,14 @@
+<% layout('layout') -%>
+
+    <% if(auth.instagram) { %>
+      <p>Logado com Instagram</p>
+    <% } else { %>
+      <a href="/auth/instagram">Logar com o Instagram</a>
+    <% } %>
+
+    <% if(auth.facebook) { %>
+      <p>Logado com Facebook</p>
+    <% } %>
+
+
+

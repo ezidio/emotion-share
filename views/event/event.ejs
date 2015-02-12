@@ -1,0 +1,21 @@
+<% layout('../layout') -%>
+<% script('/scripts/app/event/details.js') -%>
+
+<div ng-controller="DetailController as ctrl" ng-init="ctrl.load('<%= id %>')">
+	<h1>{{event.title}}</h1>
+
+
+	<div class="ui stackable items">
+	  	<div class="item" ng-repeat="media in medias">
+		  	<div class="image">
+	  		  <img ng-src="{{media.images.standard}}" class="rounded ui image"/>
+	  		  <div class="ui ribbon label">{{media.provider}}</div>
+	        </div>
+	        <div class="content">
+	          <img class="ui mini left floated image" ng-src=" {{media.user.picture}}">
+	          <div class="name" title="{{media.user.name}}">{{media.user.name}}</div>
+	          <p class="description">{{media.caption || '-'}}</p>
+	        </div>
+	  	</div>
+	</div>
+</div>
